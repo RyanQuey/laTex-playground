@@ -1,0 +1,62 @@
+% !TeX document-id = {bcbd078a-2098-4ad5-a925-88e960af44ae}
+%% From  https://tex.stackexchange.com/a/355429/327861
+
+
+% !TeX program = lualatex 
+% added this, in light of error I got, that it needed to use lualatex. See here: https://tex.stackexchange.com/a/236748/327861
+
+\documentclass{article}
+\usepackage[nil,bidi=default]{babel}
+\babelprovide[import=en-GB,main]{british}
+\babelprovide[import=he]{hebrew}
+\babelprovide[import=el]{polutonikogreek}
+\babelfont[british]{rm}{Latin Modern Roman}
+% \babelfont[hebrew]{rm}[Contextuals=Alternate]{SBL Hebrew}
+\babelfont[hebrew]{rm}[Contextuals=Alternate]{SBL Hebrew}
+% \babelfont[polutonikogreek]{rm}[Contextuals=Alternate]{SBL Greek}
+\babelfont[polutonikogreek]{rm}[Contextuals=Alternate]{SBL Greek}
+\usepackage{parskip}
+\pagestyle{empty}
+\begin{document}
+	
+	\textsuperscript{1}In the beginning was the Word, and the Word was with God,
+	and the Word was God. \textsuperscript{2}He was with God in the beginning.
+	(John 1:1–2)
+	
+\selectlanguage{polutonikogreek}
+	
+	\textsuperscript{1} Ἐν ἀρχῇ ἦν ὁ λόγος, καὶ ὁ λόγος ἦν πρὸς τὸν θεόν, καὶ θεὸς
+	ἦν ὁ λόγος. \textsuperscript{2}Οὗτος ἦν ἐν ἀρχῇ πρὸς τὸν θεόν.
+	\foreignlanguage{british}{(John 1:1–2)}
+	
+\selectlanguage{hebrew}
+	
+	\textsuperscript{1}בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ׃
+	\textsuperscript{2}וְהָאָ֗רֶץ הָיְתָ֥ה תֹ֨הוּ֙ וָבֹ֔הוּ וְחֹ֖שֶׁךְ עַל־פְּנֵ֣י תְהֹ֑ום וְר֣וּחַ אֱלֹהִ֔ים מְרַחֶ֖פֶת
+	עַל־פְּנֵ֥י הַמָּֽיִם׃ \foreignlanguage{british}{(Genesis 1:1–2)}
+	
+	\selectlanguage{british}
+	
+	Inline Greek (\foreignlanguage{polutonikogreek}{Ἐν ἀρχῇ ἦν ὁ λόγος} [John 1:1]) and
+	Hebrew (\foreignlanguage{hebrew}{בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ} [Genesis 1:1]) also must work.
+
+\section{Footnotes}
+
+\subsection{But what if a text needs a footnote?}
+
+- Simple single line footnote.\footnote{
+	Such a connection between Sabbath and New Creation should come as no surprise when we see this in light of where Lev 23--27 already developed the theology of the Sabbath (with its inherent ties to the Creation, cf. Gen 2) to include the concept of the restoration for the land (i.e., ``Sabbath for the land'') and the end of Israel's exile, which in the theology of Isaiah has already been inextricably tied with the final salvation for not just Israel but the entire world.} (works)
+	
+- Multiline Footnote.\footnote{
+	Such a connection between Sabbath and New Creation should come as no surprise when we see this in light of where Lev 23--27 already developed the theology of the Sabbath (with its inherent ties to the Creation, cf. Gen 2) to include the concept of the restoration for the land (i.e., ``Sabbath for the land'') and the end of Israel's exile. 
+	
+	This, in the theology of Isaiah, has already been inextricably tied with the final salvation for not just Israel but the entire world.} (works)
+	
+- Multiline Footnote with Hebrew.\footnote{
+	Such a connection between Sabbath and New Creation should come as no surprise when we see this in light of where Lev 23--27 already developed the theology of the Sabbath (with its inherent ties to the Creation, cf. Gen 2) to include the concept of the restoration for the land (i.e., ``Sabbath for the land'') and the end of Israel's exile. 
+	
+	And here is a Hebrew word: \foreignlanguage{hebrew}{חָרְבוֹת עוֹלָם}.
+	
+	This, in the theology of Isaiah, has already been inextricably tied with the final salvation for not just Israel but the entire world.} 
+
+\end{document}

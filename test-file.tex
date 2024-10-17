@@ -1,0 +1,35 @@
+% !TeX document-id = {bcbd078a-2098-4ad5-a925-88e960af44ae}
+%% From  https://tex.stackexchange.com/a/355429/327861
+
+
+% !TeX program = lualatex 
+% added this, in light of error I got, that it needed to use lualatex. See here: https://tex.stackexchange.com/a/236748/327861
+
+\documentclass{article}
+\usepackage[nil,bidi=default]{babel}
+\usepackage{parskip}
+\pagestyle{empty}
+\begin{document}
+	
+
+\section{Footnotes}
+
+\subsection{But what if a text needs a footnote?}
+
+- more text and so on1
+	this is also here
+
+
+
+- Simple single line footnote.\footnote{
+	Such a connection between Sabbath and New Creation should come as no surprise when we see this in light of where Lev 23--27 already developed the theology of the Sabbath (with its inherent ties to the Creation, cf. Gen 2) to include the concept of the restoration for the land (i.e., ``Sabbath for the land'') and the end of Israel's exile, which in the theology of Isaiah has already been inextricably tied with the final salvation for not just Israel but the entire world.} (works)
+	
+- Multiline Footnote.\footnote{
+	Such a connection between Sabbath and New Creation should come as no surprise when we see this in light of where Lev 23--27 already developed the theology of the Sabbath (with its inherent ties to the Creation, cf. Gen 2) to include the concept of the restoration for the land (i.e., ``Sabbath for the land'') and the end of Israel's exile. 
+	
+
+	This, in the theology of Isaiah, has already been inextricably tied with the final salvation for not just Israel but the entire world.} (works)
+
+	Another test
+	
+\end{document}
