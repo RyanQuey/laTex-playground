@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+mkdir -p ~/quick-scripts/scripts-for-latex
+cp -r $SCRIPT_DIR/*.sh ~/quick-scripts/scripts-for-latex
+
+# overwrites the settings there
+cp .latexmkrc ~/
