@@ -6,4 +6,4 @@ mkdir -p ~/quick-scripts/scripts-for-latex
 cp -r $SCRIPT_DIR/*.sh ~/quick-scripts/scripts-for-latex
 
 # overwrites the settings there
-cp .latexmkrc ~/
+cp $SCRIPT_DIR/.latexmkrc ~/

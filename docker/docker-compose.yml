@@ -1,0 +1,4 @@
+version: '3'  
+services:
+  texlive:
+    image: texlive/texlive:latest
