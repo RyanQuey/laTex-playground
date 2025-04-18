@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+curl -LO https://mirror.c an.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+tar -xvzf install-tl-unx.tar.gz
+
+cd ./install-tl-* && \
+sudo ./install-tl --no-interaction
